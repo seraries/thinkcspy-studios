@@ -1,8 +1,4 @@
 import image
-import sys
-
-# You can increase this to buy yourself some time, if you're getting a "timeout error"
-sys.setExecutionLimit(30000)
 
 img = image.Image("luther.jpg")
 new_img = image.EmptyImage(img.getWidth(), img.getHeight())

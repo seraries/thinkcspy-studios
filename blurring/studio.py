@@ -1,13 +1,9 @@
 import image
-import sys
 import random
 
-# You can increase this to buy yourself some time, if you're getting a "timeout error"
-sys.setExecutionLimit(30000)
-
 img = image.Image("luther.jpg")
-newimg = image.EmptyImage(img.getWidth(), img.getHeight())
-win = image.ImageWin()
+new_img = image.EmptyImage(img.getWidth(), img.getHeight())
+win = image.ImageWin(img.getWidth(), img.getHeight())
 
 for i in range(1, img.getWidth() - 1):
     for j in range(1, img.getHeight() - 1):
@@ -17,10 +13,10 @@ for i in range(1, img.getWidth() - 1):
         
         # set this pixel to neighbor's color
         neighbor_color = img.getPixel(nx, ny)
-        newimg.setPixel(i,j, neighbor_color)
+        new_img.setPixel(i,j, neighbor_color)
         
 
-newimg.draw(win)
+new_img.draw(win)
 win.exitonclick()
 
 
