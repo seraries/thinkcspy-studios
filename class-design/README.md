@@ -8,7 +8,7 @@
 
 ## Walkthrough
 
-For the walkthrough, choose one of the 3 design problems from the studio and work through it in class. All design problems are listed on the studio page below.
+For the walkthrough, choose one of the 3 design problems from the studio and work through it in class. All design problems are listed on the studio page below. It is up to you how you want to solve these problems.
 
 ## Studio
 
