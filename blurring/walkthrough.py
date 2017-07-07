@@ -1,20 +1,20 @@
 import image
-
-img = image.Image("luther.jpg")
-win = imge.ImageWin()
+import sys
 
 # You can increase this to buy yourself some time, if you're getting a "timeout error"
 sys.setExecutionLimit(30000)
 
-for x in range(img.getWidth()):
-    for y in range(img.getHeight()):
-        p = img.getPixel(x, y)
-        red = p.getRed()
-        green = p.getGreen()
-        blue = p.getBlue()
-        new_p = image.Pixel(255, green, blue)
-        img.setPixel(x, y, new_p)
-        
-img.draw(win)
+img = image.Image("luther.jpg")
+new_img = image.EmptyImage(img.getWidth(), img.getHeight())
+win = image.ImageWin(img.getWidth(), img.getHeight())
+
+for i in range(0, img.getWidth()):
+    for j in range(0, img.getHeight()):
+        old_p = img.getPixel(i, j)
+        red = old_p.getRed()
+        new_p = image.Pixel(red, 0, 0)
+        new_img.setPixel(i, j, new_p)
+
+new_img.draw(win)
 win.exitonclick()
     
