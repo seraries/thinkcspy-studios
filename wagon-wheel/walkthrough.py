@@ -7,8 +7,8 @@ def draw_line(length, angle):
     mike.forward(-length)
     mike.forward(length / 2)
 
-def star(nlines):
-    for angle in range(0, 180, int(180/nlines)):
+def star(lines):
+    for angle in range(0, 180, int(180/lines)):
         draw_line(200, angle)
 
 star(10)
